@@ -134,7 +134,8 @@ def main():
 
     # ==== MODELS ====
     yolo_weights = "yolov8n.pt"
-    sapiens_ckpt = Path.home() / "sapiens_lite_host" / "torchscript" / "pose" / "checkpoints" / "sapiens_0.3b" / "sapiens_0.3b_goliath_best_goliath_AP_573_torchscript.pt2"
+    SAPIENS_HOST = Path(os.environ.get("SAPIENS_HOST", str(Path.home() / "sapiens_pose" / "sapiens_host")))
+sapiens_ckpt = SAPIENS_HOST / "pose" / "checkpoints" / "sapiens_0.3b" / "sapiens_0.3b_goliath_best_goliath_AP_573_torchscript.pt2"
 
     # ==== PARAMS ====
     in_w, in_h = 768, 1024
