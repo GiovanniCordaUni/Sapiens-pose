@@ -1,0 +1,16 @@
+# weights / checkpoints
+*.pt
+*.pth
+*.pt2
+weights/
+sapiens_host/
+
+# outputs / logs
+outputs/
+*.jsonl
+*.mp4
+
+# python
+__pycache__/
+*.pyc
+.venv/
